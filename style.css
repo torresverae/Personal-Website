@@ -1,0 +1,124 @@
+:root{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    --primary-color: #ffd700;
+    --secondary-color: #F51720;
+    --tertiary-color: #000;
+    --bg-color: #3b4cca;
+    --bg-color-second: #848884	;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  .menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+  }
+  
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s;
+  }
+  
+  .menu.open {
+    left: 0;
+  }
+
+  .section {
+    position: relative;
+  }
+  
+  .profile-pic {
+    position: absolute;
+    top: -35%;
+    left: 15%;
+    margin-right: 200px;
+    transform: translateY(100%);
+  }
+  
+  .profile-img {
+    display: block;
+    width: 800x;
+    height: 500px;
+    border-radius: 50%;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    margin-bottom: 10px;
+  }
+  
+  .nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    font-size: 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px; 
+  }
+
+  .section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .parallax {
+    transition: transform 0.5s;
+  }
+  
+  .section.active .parallax {
+    transform: translateX(100px);
+  }
+  
